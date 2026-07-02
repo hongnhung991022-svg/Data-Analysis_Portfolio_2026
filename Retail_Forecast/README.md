@@ -213,14 +213,43 @@ retail.pbix
 
 ### Analysis of Operational Performance
 - During the 2016–2019 period, the company achieved solid growth in both revenue and profit.
-![dashboard_PowerBI](RA_2016_2019.png)
+  
+![](RA_2016_2019.png)
+
 - As of the end of 2019:
   - The company had processed approximately 21,000 orders,
   - Recorded revenue of around USD 45 million,
   - Maintained a stable profit margin of approximately 58%.
+    
 Notably:
 - 2018 saw the highest profit growth rate at 72.12%.
 - In 2019, revenue peaked at USD 18.26 million, though the growth rate began to slow, dropping to 43.31%.
 - Shopping demand was concentrated primarily in the first and fourth quarters of each year.
-- The first quarter of 2020 got off to a successful start with revenue reaching USD 5 million—surpassing the figure from the same period the previous year.
+- (2019 vs. 2020) With both **Average Order Value (AOV) and margins remaining unchanged**, the decline did not stem from pricing or sales efficiency but rather **from volume (a sharp drop in the number of orders and customers)**.
+- Comparing monthly patterns: figures for January/February 2020 remained comparable to those of 2019, indicating a stable start to the year, with the **decline becoming clearly evident from March onwards**.
 
+### **The Issue**
+- Despite achieving high revenue in Q1 2020, the total revenue for the year was only $9 million, representing a 49.1% year-over-year decline.
+**Why did revenue drop by half in just one year? What were the causes, and what was the extent of the impact?**
+  
+First, I broke down the revenue using the following formula:
+
+`Revenue = Number of Orders × Average Order Value (AOV)`
+
+The analysis results show:
+- The sharp decline in revenue occurred after March—specifically, starting in April.
+- The AOV dropped by only 0.3%—a negligible amount that had virtually no significant impact on the overall issue.
+- Profit margins remained stable throughout 2020 at 58.61%.
+- However, the number of orders and customers fell sharply; in 2020, there were only 3,868 customers and 4,653 orders.
+- The decline coincided with the global outbreak of the COVID-19 pandemic. This likely had a severe impact on revenue due to social distancing regulations and disruptions to goods transportation.
+
+**The root cause lies in the sharp decline in order volumes.**
+
+Conduct a deeper analysis by market and product category to assess:
+| N°| Questions |
+| --- | --- |
+|1| Where are orders declining, and which customer segment is driving the largest drop?|
+| 2 | Does the impact vary across markets? |
+| 3 | Which region is most severely affected? |
+| 4 | Which markets are showing signs of early recovery? |
+| 5 | Which product categories are proving more resilient during this downturn?|
