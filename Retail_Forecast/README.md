@@ -124,3 +124,102 @@ erDiagram
     Fact_Sales }|--|| Dim_Products : "contains"
     Fact_Sales }|--|| Dim_Stores : "placed_at"
 ```
+## Data Processing Operations Using SQL Server
+
+### 1. ROW-LEVEL METRICS & OPERATION METRICS
+**Objective**: Prepare granular data for dashboards and  Export the processed data to a file named `sales_data` 
+
+- Handle Missing Data
+- Calculate overall revenue, cost
+- Calculate the number of delivery days
+- Channel Classification 
+
+```
+
+SELECT
+    s.order_number,
+    s.order_date,
+    
+    -- Handle Missing Data: Fallback to order_date if delivery_date is NULL
+    COALESCE(s.delivery_date, s.order_date) AS adjusted_delivery_date,
+    s.delivery_date AS original_delivery_date, -- Added alias to prevent column duplication
+    
+    s.customer_key,
+    s.store_key,
+    s.product_key,
+    s.quantity,
+    
+    -- Row-level Financials
+    CAST((s.quantity * p.unit_price_usd) AS NUMERIC(18,2)) AS revenue,
+    CAST((s.quantity * p.unit_cost_usd) AS NUMERIC(18,2)) AS cost,
+    CAST((s.quantity * (p.unit_price_usd - p.unit_cost_usd)) AS NUMERIC(18,2)) AS profit,
+    
+    -- Operational Metrics: Delivery Delay
+    DATEDIFF(DAY, s.order_date, COALESCE(s.delivery_date, s.order_date)) AS delivery_delay_days,
+    
+    -- Channel Classification
+    CASE 
+        WHEN s.delivery_date IS NULL THEN 'In-Store'
+        ELSE 'Online'
+    END AS order_channel
+
+FROM retails.sales AS s
+JOIN retails.products AS p 
+    ON s.product_key = p.product_key;
+
+```
+
+### 2.CUSTOMER COHORT & LIFETIME METRICS (RFM BASE)
+**Objective**: Analyze customer behavior to support Cohort segmentation and Export the processed data to a file named `customers_data`.
+
+```
+WITH SystemParams AS (
+    -- Optimization: Fetch max date once instead of calculating per row.
+    SELECT MAX(order_date) AS max_system_date FROM retails.sales
+),
+CustomerBase AS (
+    SELECT 
+        s.customer_key,
+        MIN(s.order_date) AS first_purchase_date,
+        MAX(s.order_date) AS last_purchase_date,
+        CAST(SUM(s.quantity * p.unit_price_usd) AS NUMERIC(18,2)) AS lifetime_spend,
+        COUNT(DISTINCT s.order_number) AS total_orders
+    FROM retails.sales AS s
+    JOIN retails.products AS p 
+        ON s.product_key = p.product_key
+    GROUP BY s.customer_key
+)
+SELECT 
+    c.*, 
+    cb.first_purchase_date,
+    cb.last_purchase_date,
+    cb.lifetime_spend,
+    cb.total_orders,
+    
+    -- Customer Tenure (Months)
+    DATEDIFF(MONTH, cb.first_purchase_date, sp.max_system_date) AS months_since_first_purchase
+FROM retails.customers AS c
+LEFT JOIN CustomerBase AS cb 
+    ON c.customer_key = cb.customer_key
+CROSS JOIN SystemParams AS sp;
+```
+
+## Power BI Dashboard
+The repository includes the Power BI report file
+- Recommand : Download it to your device for convenient operation on the dashboard. 
+```text
+retail.pbix
+```
+
+### Analysis of Operational Performance
+- During the 2016–2019 period, the company achieved solid growth in both revenue and profit.
+- As of the end of 2019:
+  - The company had processed approximately 21,000 orders,
+  - Recorded revenue of around USD 45 million,
+  - Maintained a stable profit margin of approximately 58%.
+Notably:
+- 2018 saw the highest profit growth rate at 72.12%.
+- In 2019, revenue peaked at USD 18.26 million, though the growth rate began to slow, dropping to 43.31%.
+- Shopping demand was concentrated primarily in the first and fourth quarters of each year.
+- The first quarter of 2020 got off to a successful start with revenue reaching USD 5 million—surpassing the figure from the same period the previous year.
+
