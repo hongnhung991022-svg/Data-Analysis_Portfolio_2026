@@ -25,7 +25,7 @@ An end-to-end data analytics and forecasting pipeline. The project turns raw tra
 - [Data Pipeline](#data-pipeline)
 - [Dimensional Model](#dimensional-model)
 - [Power BI Dashboard](#power-bi-dashboard)
-- [Project Overview](#project-overview)
+- [Project Analysis](#project-analysis)
 - [Recommandation](#recommandation)
 - [Conclusion](#conclusion)
 
@@ -210,6 +210,7 @@ The repository includes the Power BI report file
 ```text
 retail.pbix
 ```
+## Project Analysis
 
 ### Analysis of Operational Performance
 - During the 2016–2019 period, the company achieved solid growth in both revenue and profit.
@@ -253,3 +254,77 @@ Conduct a deeper analysis by market and product category to assess:
 | 3 | Which region is most severely affected? |
 | 4 | Which markets are showing signs of early recovery? |
 | 5 | Which product categories are proving more resilient during this downturn?|
+
+### Market Analysis
+**Global Performance Overview:**
+- The US market remains the cornerstone of the business across all operational metrics, supported by a network of 20 physical stores.
+- Average Order Value (AOV) in 2020 experienced a slight Year-over-Year (YoY) decline but remained robust at over $2,000 per order.
+- Revenue per Square Meter is utilized as the primary KPI to evaluate the spatial efficiency and actual performance of each branch.
+- In 2020, the US market recorded a severe revenue drop of 43.57%, which directly led to the permanent closure of the Utah branch.
+
+**Root Causes:**
+- A drastic decline in new customer acquisition; revenue generation became entirely heavily reliant on returning customers.
+- Operational inefficiencies in low-performing branches heavily eroded the overall profit margin.
+- The COVID-19 pandemic caused a massive drop in foot traffic, making it impossible for several stores to cover their fixed operational costs.
+
+**Strategic Countermeasures** :
+- Network Restructuring: Liquidate and close underperforming stores.
+- Capital Reallocation: Channel investments into top-performing branches to strengthen customer retention programs and launch aggressive acquisition campaigns for new buyers.
+
+_France, the UK, and Germany are identified as high-potential markets requiring tailored expansion strategies:_
+
+**1. The French Market:**
+
+- Despite generating a modest revenue volume compared to the US, France demonstrated a solid growth rate (pre-pandemic) and suffered the least financial impact during the COVID-19 crisis.
+
+- The market shows high resilience and potential; all 4 current branches are operating at a highly efficient level.
+
+- Customer mix is well-balanced between new and returning segments, although returning customers remain the primary revenue drivers.
+
+**2. The UK Market:**
+
+- Comprises 6 branches. In 2020, the market suffered a severe performance contraction, with Revenue per Square Meter plunging by 53.1% (most notably in the Ayrshire region).
+
+- Root Causes: A sharp decline in total order volume. The customer base was stagnant with zero growth signals in new acquisitions, leaving the branches to survive solely on legacy customers.
+
+- Solutions: Divest from highly inefficient branches immediately. Revamp the marketing strategy to restart new customer acquisition while maintaining loyalty programs for existing ones.
+
+**3. The German Market:**
+
+- In 2018, Germany led the global network with a peak YoY growth of 124% (fueled by 81.4% returning customers and 18.6% new customers).
+
+- Growth momentum decelerated to 49% in 2019 and hit rock bottom at -59% in 2020 due to the pandemic.
+
+- Root Causes: Beyond the macroeconomic shock of COVID-19, underlying operational inefficiencies were evident early on, forcing the closure of the Brandenburg branch in 2019.
+
+**4. Italy, Australia, Netherlands, Canada:**
+
+- Maintained relatively stable revenue streams and customer mixes despite the global pandemic disruptions.
+
+- Root Causes: A streamlined footprint (fewer store locations) allowed for agile management, localized risk mitigation, and stronger resilience against macro shocks.
+
+- Solutions: Continue closing branches that cannibalize profits or create financial bottlenecks. Focus investments on premium branches to retain the core customer base and attract new footfall.
+
+### Product Category Analysis
+**1. Product Category Performance & Resilience.**
+
+2020 witnessed a widespread contraction across all product catalogs due to the macroeconomic shock of COVID-19. However, this period served as a stress test, revealing the resilience levels of different product lines:
+
+- Severely Impacted Categories: Home Appliances experienced the steepest plunge, with orders dropping by 60.91% and revenue by 58.99%. Audio equipment followed closely, with orders down 57.11% and revenue dropping 57.46%. These categories face a slow recovery trajectory.
+
+- Core Category Contraction: Computers—the backbone of the retail network—suffered a massive hit, with orders decreasing by 49.27% and revenue falling by 47.33%.
+
+- Relatively Resilient Categories: Entertainment and telecommunication devices demonstrated stronger resistance against the pandemic. Cell Phones recorded the lowest revenue drop across the system (-43.86%), while TV & Video contained its order decline at -42.24%.
+
+**2. Customer Behavior & Segment Shifts by Category.**
+
+The aforementioned category performances are direct reflections of underlying shifts in customer behavior:
+- Purchasing Power Drop among Returning Customers: The core loyalist segment significantly cut back spending on traditional flagship products, notably Computers (-3.71%), Home Appliances (-5.29%), and Audio (-6.33%). Since historical revenue heavily relies on this cohort, their spending pullback poses a severe threat to post-pandemic recovery.
+- New Customer Acquisition & The Online Shift: A rare bright spot emerged from an influx of new customers purchasing devices for home entertainment and connectivity during lockdowns. Minor growth was recorded in Cell Phones (+0.14%), Music & Movies (+0.15%), Cameras & Camcorders (+0.15%), and TV & Video (+0.12%).
+- Distribution Channel Bottleneck: The demand from these new buyers was predominantly channeled through Online platforms. However, this digital surge was vastly insufficient to offset the catastrophic revenue losses from the In-store channel, which traditionally drives the bulk of high-ticket sales (Computers, Appliances) and gross margins.
+
+**3. Strategic Conclusion & Root Causes.**
+
+The global revenue downturn is driven by two fundamental factors:
+- Disrupted Consumer Behavior: A sudden shift in purchasing habits during lockdown protocols, heavily prioritizing home entertainment over high-value household or workspace items.
+- Channel Imbalance: Over-reliance on the physical brick-and-mortar network. While the Online channel showed positive signals, it remains operationally immature, lacking the capability to bear the revenue load or drive uniform traction across the entire product catalog.
