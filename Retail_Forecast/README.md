@@ -314,7 +314,7 @@ _France, the UK, and Germany are identified as high-potential markets requiring 
 
 - Core Category Contraction: Computers—the backbone of the retail network—suffered a massive hit, with orders decreasing by 49.27% and revenue falling by 47.33%.
 
-- Relatively Resilient Categories: Entertainment and telecommunication devices demonstrated stronger resistance against the pandemic. Cell Phones recorded the lowest revenue drop across the system (-43.86%), while TV & Video contained its order decline at -42.24%.
+- Relatively Resilient Categories: Entertainment and telecommunication devices demonstrated stronger resistance against the pandemic. Music,Movies and AudioBooks recorded the lowest revenue drop across the system (-43.86%), while TV & Video contained its order decline at -42.24%.
 
 **2. Customer Behavior & Segment Shifts by Category.**
 
