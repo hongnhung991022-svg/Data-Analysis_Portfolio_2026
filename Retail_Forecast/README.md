@@ -15,7 +15,7 @@
 
 ## Introduction
 
-An end-to-end data analytics and forecasting pipeline. The project turns raw transactional records into a cleaned analytical dataset, explores purchasing behavior, builds a dimensional data model, diagnoses a historical 49% drop in retail sales, compares machine learning approaches for demand forecasting, and publishes the BI-ready outputs into SQL Server for Power BI reporting.
+An end-to-end retail data analytics pipeline focused on crisis diagnostics and operational reporting. This project transforms raw transactional records into a cleaned analytical dataset, builds a Star Schema dimensional data model, and publishes BI-ready outputs into SQL Server for Power BI reporting. The core analysis explores purchasing behavior shifts and diagnoses the root causes behind a historical 49.1% year-over-year drop in global retail sales during the 2020 pandemic.
 
 ## Table of Contents
 
@@ -42,6 +42,10 @@ An end-to-end data analytics and forecasting pipeline. The project turns raw tra
 | `products_data.csv` | Dimension table providing master data for the entire product catalog. | Kept in its original state. Contains product identification attributes (SKU, brand, color), product hierarchy structure (category, subcategory), and unit-level financial metrics (unit price, unit cost).|
 | `sales_data.csv` | The central Fact table recording the global order history. This is the primary data source for revenue and operational dashboards. | Comprehensively transformed via SQL: **Missing Data Handling**: Null `delivery_date` values were imputed using the corresponding `order_date`. **Pre-calculated Metrics (Row-level math)**: Core financial metrics (`revenue`, `cost`, `profit`) were computed in advance at the transaction level to optimize Power BI dashboard load times. **Feature Engineering**: Created new operational variables, including delivery delay duration (`delivery_delay_days`) and distribution channel classification (`order_channel`: In-Store vs. Online).|
 | `stores_data.csv` | Dimension table storing the profiles of physical retail locations operated by Global Retail Holdings. | Kept in its original state. Provides geographical data (country, state) and physical scale attributes (square_meters, open_date) to support regional performance analysis.|
+
+## Dataset Note
+
+> ⚠️ This dataset is used only for learning, analysis, and project demonstration purposes. It is not a production dataset from a real business environment.
 
 ## Data Pipeline
 
@@ -241,7 +245,7 @@ The analysis results show:
 - The sharp decline in revenue occurred after March—specifically, starting in April.
 - The AOV dropped by only 0.3%—a negligible amount that had virtually no significant impact on the overall issue.
 - Profit margins remained stable throughout 2020 at 58.61%.
-- However, the number of orders and customers fell sharply; in 2020, there were only 3,868 customers and 4,653 orders.
+- However, the number of orders and customers fell sharply; in 2020, there were only 3,868 customers and 4,635 orders.
 - The decline coincided with the global outbreak of the COVID-19 pandemic. This likely had a severe impact on revenue due to social distancing regulations and disruptions to goods transportation.
 
 **The root cause lies in the sharp decline in order volumes.**
@@ -287,7 +291,7 @@ _France, the UK, and Germany are identified as high-potential markets requiring 
 
 - Root Causes: A sharp decline in total order volume. The customer base was stagnant with zero growth signals in new acquisitions, leaving the branches to survive solely on legacy customers.
 
-- Solutions: Divest from highly inefficient branches immediately. Revamp the marketing strategy to restart new customer acquisition while maintaining loyalty programs for existing ones.
+- Solutions:Liquidate operations in severely contracted regions (e.g., Ayrshire) to stop cash burn. Reallocate capital to revamp the marketing strategy in the remaining viable UK branches to restart new customer acquisition.
 
 **3. The German Market:**
 
@@ -320,7 +324,7 @@ _France, the UK, and Germany are identified as high-potential markets requiring 
 
 The aforementioned category performances are direct reflections of underlying shifts in customer behavior:
 - Purchasing Power Drop among Returning Customers: The core loyalist segment significantly cut back spending on traditional flagship products, notably Computers (-3.71%), Home Appliances (-5.29%), and Audio (-6.33%). Since historical revenue heavily relies on this cohort, their spending pullback poses a severe threat to post-pandemic recovery.
-- New Customer Acquisition & The Online Shift: A rare bright spot emerged from an influx of new customers purchasing devices for home entertainment and connectivity during lockdowns. Minor growth was recorded in Cell Phones (+0.14%), Music & Movies (+0.15%), Cameras & Camcorders (+0.15%), and TV & Video (+0.12%).
+- New Customer Acquisition & The Online Shift: While core physical categories plummeted, demand for home entertainment and connectivity (Cell Phones [+0.14%], Music & Movies [+0.15%], Cameras & Camcorders [+0.15%], and TV & Video [+0.12%]) stabilized, maintaining a modest new customer retention rate. This indicates a slight consumer pivot toward digital and entertainment goods, though it remains vastly insufficient to offset the catastrophic revenue losses from the in-store channel.
 - Distribution Channel Bottleneck: The demand from these new buyers was predominantly channeled through Online platforms. However, this digital surge was vastly insufficient to offset the catastrophic revenue losses from the In-store channel, which traditionally drives the bulk of high-ticket sales (Computers, Appliances) and gross margins.
 
 **3. Strategic Conclusion & Root Causes.**
@@ -328,3 +332,37 @@ The aforementioned category performances are direct reflections of underlying sh
 The global revenue downturn is driven by two fundamental factors:
 - Disrupted Consumer Behavior: A sudden shift in purchasing habits during lockdown protocols, heavily prioritizing home entertainment over high-value household or workspace items.
 - Channel Imbalance: Over-reliance on the physical brick-and-mortar network. While the Online channel showed positive signals, it remains operationally immature, lacking the capability to bear the revenue load or drive uniform traction across the entire product catalog.
+
+## Recommandation 
+
+**1. Omnichannel Shift**
+
+- Comprehensively upgrade online channels to offset declining foot traffic at physical stores and fully capture new customer segments.
+- Integrate Online-to-Offline (O2O) experiences: Enable online ordering with in-store pickup and returns to maximize the utility of the existing retail network.
+
+**2. Store Network Restructuring (Store Optimization)**
+
+- Permanently close branches with consistently negative cash flow and low revenue-per-square-meter metrics (particularly in the US, UK, and Germany).
+- Retain and upgrade high-performing stores (e.g., in France and Italy), converting a portion of their floor space into micro-fulfillment centers to support online channels.
+
+**3. Merchandising Pivot**
+
+- Increase inventory levels and allocate marketing budgets to entertainment and connectivity devices (phones, TVs & video equipment, audio gear, cameras) to capitalize on the "at-home" consumption trends of new customer segments.
+- Launch inventory clearance and cross-selling campaigns, or create deeply discounted bundles for computers and home appliances, to reignite demand among existing customers.
+
+**4. Customer Strategy (Restoring Cash Flow)**
+
+- Redesign loyalty and VIP programs to include exclusive perks (such as cashback and extended warranties) aimed at reversing the sharp decline in spending among returning customers.
+- Implement remarketing campaigns targeting customers acquired during the pandemic, converting them from one-time buyers into frequent shoppers.
+
+## Conclusion
+
+The 2020 fiscal year served as a severe stress test for Global Retail Holdings, exposing the vulnerabilities of a heavily physical, brick-and-mortar reliant business model. The diagnostic analysis confirms that the 49.1% revenue contraction was a volume-driven crisis, not a pricing or margin failure, as Average Order Value and Profit Margins remained strictly insulated.
+
+The core takeaways are:
+
+- Structural Vulnerability: The catastrophic drop in foot traffic paralyzed the primary revenue engines (Computers and Home Appliances), proving that the current decentralized operational structure lacks the agility to shift inventory to digital channels during macro-disruptions.
+
+- Customer Base Fragility: The over-reliance on Returning Customers became a critical liability when their purchasing power contracted, while New Customer acquisition completely stagnated.
+
+- The Path Forward: Recovery hinges on executing a definitive Omnichannel pivot. By purging high-cost, low-yield physical branches and converting viable real estate into micro-fulfillment hubs, the company can protect its baseline margins while repositioning its catalog to capture the growing digital-first consumer segment.
