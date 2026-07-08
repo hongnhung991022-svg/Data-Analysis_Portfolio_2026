@@ -29,12 +29,11 @@ Retail_Forecast_Project/
 │           
 ├── Dashboard_photo/
 │   ├── RA_1619.png
-│   ├── 
-│   ├── 
-│   └── 
-├── Retail_Forecast.pptx
+│   ├── RA_20.png
+│   └── RA_1920
 ├── retail forecast.pdf
-├── retail.pbix
+├── retail_forecast.pbix
+├── retail_en.sql
 └── README.md
 ```
 ## Table of Contents
@@ -232,7 +231,7 @@ CROSS JOIN SystemParams AS sp;
 The repository includes the Power BI report file
 - Recommand : Download it to your device for convenient operation on the dashboard. 
 ```text
-retail.pbix
+retail_forecast.pbix
 ```
 ## Project Analysis
 
