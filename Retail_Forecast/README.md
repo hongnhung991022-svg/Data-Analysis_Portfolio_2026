@@ -255,6 +255,10 @@ Notably:
 - (2019 vs. 2020) With both **Average Order Value (AOV) and margins remaining unchanged**, the decline did not stem from pricing or sales efficiency but rather **from volume (a sharp drop in the number of orders and customers)**.
 - Comparing monthly patterns: figures for January/February 2020 remained comparable to those of 2019, indicating a stable start to the year, with the **decline becoming clearly evident from March onwards**.
 
+<p align="center">
+    <img src="dashboard_photo/RA_1920.png" width="850">
+</p>
+
 ### **The Issue**
 - Despite achieving high revenue in Q1 2020, the total revenue for the year was only $9 million, representing a 49.1% year-over-year decline.
 **Why did revenue drop by half in just one year? What were the causes, and what was the extent of the impact?**
