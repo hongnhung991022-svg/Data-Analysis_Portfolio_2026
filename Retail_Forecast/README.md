@@ -22,10 +22,10 @@ An end-to-end retail data analytics pipeline focused on crisis diagnostics and o
 ```text
 Retail_Forecast_Project/
 ├── data/
-│   ├── bronze/
-│   ├── silver/
-│   ├── dim_fact_table/
-│   └── semantic_model/
+│   ├── customers_data.csv
+│   ├── products_data.csv
+│   ├── sales_data.csv
+│   └── stores_data.csv
 │           
 ├── Dashboard_photo/
 │   ├── RA_1619.png
