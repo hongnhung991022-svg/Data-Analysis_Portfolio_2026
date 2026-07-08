@@ -219,7 +219,7 @@ retail.pbix
 ### Analysis of Operational Performance
 - During the 2016–2019 period, the company achieved solid growth in both revenue and profit.
   
-![](RA_2016_2019.png)
+![](RA_1619.png)
 
 - As of the end of 2019:
   - The company had processed approximately 21,000 orders,
