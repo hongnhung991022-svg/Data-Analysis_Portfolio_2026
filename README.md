@@ -2,7 +2,7 @@
 Welcome to my data analytics portfolio. Below are two end-to-end analytics projects demonstrating my ability to diagnose business crises, mitigate financial risks, and design data-driven go-to-market strategies.
 
 ## Project 1: Retail Analytics - Crisis Diagnostic & Recovery Strategy
-Live Dashboard: https://app.powerbi.com/links/Y6UDucbFUR?ctid=9b04108f-c68e-4801-b123-8c81308f3ebe&pbi_source=linkShare&bookmarkGuid=bd4ab4dc-0587-4755-96a0-11ba4b453bf8 
+Download Dashboard: https://github.com/hongnhung991022-svg/Data-Analysis_Portfolio_2026/blob/main/Retail_Forecast/retail_forecast.pbix
 
 Tools: Power BI, SQL, DAX, Data Storytelling
 
