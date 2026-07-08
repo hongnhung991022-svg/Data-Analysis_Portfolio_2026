@@ -19,7 +19,7 @@ Decomposing the revenue metric revealed that Average Order Value (AOV) and Profi
 - Channel & Inventory: Proposed a rapid shift to E-commerce/BOPIS (Buy Online, Pick-Up In Store) and halted inventory restocks for non-essential categories (Audio, Appliances) to protect cash flow for high-margin tech products.
 
 ## Project 2: Aurora Bank - Credit Card Up-Selling & Risk Mitigation
-Live Dashboard: https://app.powerbi.com/links/awmM9qT5m1?ctid=9b04108f-c68e-4801-b123-8c81308f3ebe&pbi_source=linkShare&bookmarkGuid=b466574b-372c-433a-ba07-19bcc57ac4c4
+Download Dashboard: https://github.com/hongnhung991022-svg/Data-Analysis_Portfolio_2026/blob/main/Aurora_Bank/aurora_bank.pbix
 
 Tools: SQL, Power BI, Customer Segmentation, Risk Analysis
 
