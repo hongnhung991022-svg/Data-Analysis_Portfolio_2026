@@ -17,6 +17,26 @@
 
 An end-to-end retail data analytics pipeline focused on crisis diagnostics and operational reporting. This project transforms raw transactional records into a cleaned analytical dataset, builds a Star Schema dimensional data model, and publishes BI-ready outputs into SQL Server for Power BI reporting. The core analysis explores purchasing behavior shifts and diagnoses the root causes behind a historical 49.1% year-over-year drop in global retail sales during the 2020 pandemic.
 
+## Repository Structure
+
+```text
+Retail_Forecast_Project/
+├── data/
+│   ├── bronze/
+│   ├── silver/
+│   ├── dim_fact_table/
+│   └── semantic_model/
+│           
+├── Dashboard_photo/
+│   ├── RA_1619.png
+│   ├── 
+│   ├── 
+│   └── 
+├── Retail_Forecast.pptx
+├── retail forecast.pdf
+├── retail.pbix
+└── README.md
+```
 ## Table of Contents
 
 - [Context](#context)
