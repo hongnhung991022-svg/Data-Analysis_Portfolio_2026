@@ -239,7 +239,9 @@ retail.pbix
 ### Analysis of Operational Performance
 - During the 2016–2019 period, the company achieved solid growth in both revenue and profit.
   
-![](RA_1619.png)
+<p align="center">
+    <img src="dashboard_photo/RA_1619.png" width="850">
+</p>
 
 - As of the end of 2019:
   - The company had processed approximately 21,000 orders,
@@ -256,6 +258,10 @@ Notably:
 ### **The Issue**
 - Despite achieving high revenue in Q1 2020, the total revenue for the year was only $9 million, representing a 49.1% year-over-year decline.
 **Why did revenue drop by half in just one year? What were the causes, and what was the extent of the impact?**
+
+<p align="center">
+    <img src="dashboard_photo/RA_20.png" width="850">
+</p>
   
 First, I broke down the revenue using the following formula:
 
